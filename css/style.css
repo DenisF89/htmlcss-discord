@@ -1,0 +1,141 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* -------------------------------CLASSI BOX--------------------------- */
+
+.dashed{border: 2px dashed black;}
+
+.flexbox{
+    display:flex;
+    align-items: stretch;
+    min-height: 60vh;
+}
+
+.boxed{
+    display: flex;
+    flex:0.6;
+    margin: 20px auto;
+}
+
+/* ---------------------------------HEADER--------------------------------- */
+
+header{
+    background-color: rgb(150, 255, 255);
+    padding-bottom:2px;
+}
+
+#blocco_0{
+    min-height:50px;
+}
+
+    #nav{
+        background-color: orange;
+        font-size: 12px;
+        margin: 10px auto;
+    }
+
+    #nav div{
+        display: flex;
+        align-items: center;
+        padding: 0 5px;
+    }
+
+    #logo{
+        flex:1;
+        justify-content: flex-start;
+    }
+
+    #menu{
+        flex:3;
+        justify-content:center;
+        gap: 30px;
+    } 
+
+    #login{
+        flex:1;
+        justify-content: flex-end;
+    }
+
+#blocco_1{
+    background-color: blue;
+}
+
+    #main_content{
+        background-color: rgb(238, 116, 216);
+        flex:0.8;
+        margin: 20px auto;
+    }
+
+/* ----------------------------MAIN---------------------------- */
+
+/* #blocco_2, #blocco_4{
+    background-color: white;
+} */
+#blocco_3, #blocco_5{
+    background-color: rgb(192, 192, 192);
+}
+
+    .azzurro{
+        background-color: rgb(0, 195, 255);
+        flex:2;
+    }
+
+    .rosa{
+        background-color: pink;
+        flex:1;
+    }
+
+#blocco_5{
+    min-height: 80vh;
+}
+
+    .verde{
+        background-color: green;
+        flex:1;
+    }
+
+/* -----------------------------FOOTER------------------------------ */
+
+footer{
+    background-color: rgb(22, 22, 22);
+    }
+
+#blocco_6{
+    border-bottom: 1px solid grey;
+}
+    #footer_colonne{
+        margin-top:5px;
+    }
+    #footer_colonne div{
+        background-color: aqua;
+        flex:1;
+    }
+    #footer_colonne div:first-child{
+        background-color: red;
+        flex:2;
+    }
+
+#blocco_7{
+    min-height: 60px;
+}
+    #footer_menu{
+        background-color: aquamarine;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom:0;
+    }
+    #bottone_sx, #bottone_dx{
+        background-color: rgb(183, 183, 183);
+        padding: 3px;
+    }
