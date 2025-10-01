@@ -5,6 +5,7 @@
 }
 body{
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
     background-color: white;
 }
 a{
@@ -24,14 +25,15 @@ a{
 
 .boxed{
     display: flex;
-    flex:0.6;
+    flex:0.7;
     margin: 20px auto;
+    flex-wrap: wrap;
 }
 
 /* ---------------------------------HEADER--------------------------------- */
 
 header{
-    background-color: rgb(150, 255, 255);
+    background-color: rgb(42, 94, 232);
     padding-bottom:2px;
 }
 
@@ -40,14 +42,13 @@ header{
 }
 
     #nav{
-        background-color: orange;
-        font-size: 12px;
-        margin: 10px auto;
+        margin: 20px auto;
     }
 
     #nav div{
         display: flex;
         align-items: center;
+        /* flex-wrap: wrap; */
         padding: 0 5px;
     }
 
@@ -59,23 +60,73 @@ header{
     #menu{
         flex:3;
         justify-content:center;
-        gap: 30px;
+        gap: 4em;
     } 
+
+    #menu a{
+        color:white;
+        font-weight: bold;
+        font-size: 1.5em;
+        
+    }
 
     #login{
         flex:1;
         justify-content: flex-end;
     }
 
+    button{
+        padding: 0.6em 1.2em;
+        border-radius:1em;
+        border: none;
+        color:rgb(0, 0, 0);
+        background-color: white;
+        font-size: 1.3em;
+        cursor: pointer;
+    }
+
 #blocco_1{
-    background-color: blue;
+    /* background-color: blue; */
+    background-image: url(../img/jumbo.png);
+    background-size: cover;
 }
 
-    #main_content{
-        background-color: rgb(238, 116, 216);
+    #main_title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        /* background-color: rgb(238, 116, 216); */
         flex:0.8;
         margin: 20px auto;
     }
+    h1{
+        font-size: 5em;
+        font-weight: bold;
+        color: white;
+        padding-bottom: 20px;
+    }
+    h1+p{
+        font-size: 2em;
+       /*  font-weight: bold; */
+        color: white;
+        text-align: center;
+        line-height: 1.5em;
+    }
+     span{
+        display: flex;
+        gap: 2em;
+    }
+    span button{
+        font-size: 2em;
+        gap: 10px;
+    }
+    .black{
+        background-color: black;
+        color: white;
+    }
+   
 
 /* ----------------------------MAIN---------------------------- */
 
@@ -89,11 +140,30 @@ header{
     .azzurro{
         background-color: rgb(0, 195, 255);
         flex:2;
+        display: flex;
+        align-items: center;
+        /* justify-content: center; */
     }
 
     .rosa{
         background-color: pink;
         flex:1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap:2em;
+        padding: 1em;
+    }
+    .azzurro img{
+       min-width: 100%;
+    }
+
+    h2{
+        font-size: 4em;
+    }
+    h2+p{
+        font-size: 2em;
+        line-height: 1.5em;
     }
 
 #blocco_5{
