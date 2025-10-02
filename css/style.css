@@ -277,3 +277,15 @@ h4{
 #bottone_dx{
        font-size: 1em;
     }
+
+.wave {
+    height:100px;
+    weight:100%;
+    -webkit-mask-image: url(../img/wave.svg);
+     mask-image: url(../img/wave.svg);
+    background-color: rgb(246, 246, 246);
+}
+
+.flip{
+  transform: scaleY(-1);
+}
