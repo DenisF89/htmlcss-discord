@@ -14,17 +14,38 @@ a{
 }
 
 .center-text{
- text-align: center;
+    text-align: center;
+}
+
+button{
+    padding: 0.6em 1.2em;
+    border: none;
+    border-radius:1em;
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+.white{
+    color:rgb(0, 0, 0);
+    background-color: white;
+}
+
+.black{
+        background-color: black;
+        color: white;
+}
+
+.violet{
+        background-color: rgb(142, 161, 226);
+        color: white;
+        font-size: 1.4em;
+        font-weight: 600;
 }
 
 /* -------------------------------CLASSI BOX--------------------------- */
 
-.dashed{border: 2px dashed black;}
-
 .flexbox{
     display:flex;
-    align-items: stretch;
-   /*  min-height: 60vh; */
 }
 
 .boxed{
@@ -34,6 +55,18 @@ a{
     flex-wrap: wrap;
 }
 
+.wave {
+    height:100px;
+    weight:100%;
+    -webkit-mask-image: url(../img/wave.svg);
+     mask-image: url(../img/wave.svg);
+    background-color: rgb(246, 246, 246);
+}
+
+.flip{
+  transform: scaleY(-1);
+}
+
 /* ---------------------------------HEADER--------------------------------- */
 
 header{
@@ -41,18 +74,13 @@ header{
     padding-bottom:2px;
 }
 
-#blocco_0{
-    min-height:50px;
-}
-
     #nav{
-        margin: 20px auto;
+        flex-wrap: nowrap;
     }
 
     #nav div{
         display: flex;
         align-items: center;
-        /* flex-wrap: wrap; */
         padding: 0 5px;
     }
 
@@ -67,41 +95,28 @@ header{
         gap: 4em;
     } 
 
-    #menu a{
-        color:white;
-        font-weight: bold;
-        font-size: 1.5em;
-        
-    }
+        #menu a{
+            font-weight: bold;
+            font-size: 1.5em;
+        }
 
     #login{
         flex:1;
         justify-content: flex-end;
     }
 
-    button{
-        padding: 0.6em 1.2em;
-        border-radius:1em;
-        border: none;
-        color:rgb(0, 0, 0);
-        background-color: white;
-        font-size: 1.3em;
-        cursor: pointer;
-    }
-
 #blocco_1{
-    /* background-color: blue; */
     background-image: url(../img/jumbo.png);
     background-size: cover;
 }
-
     #main_title{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 30px;
-        /* background-color: rgb(238, 116, 216); */
+
+        /* centra piu piccolo */
         flex:0.8;
         margin: 20px auto;
     }
@@ -113,7 +128,6 @@ header{
     }
     h1+p{
         font-size: 2em;
-       /*  font-weight: bold; */
         color: white;
         line-height: 1.5em;
     }
@@ -123,34 +137,27 @@ header{
     }
     span button{
         font-size: 2em;
-        gap: 10px;
     }
-    .black{
-        background-color: black;
-        color: white;
-    }
-   
    
 
 /* ----------------------------MAIN---------------------------- */
 
-/* #blocco_2, #blocco_4{
-    background-color: white;
-} */
+
 #blocco_3, #blocco_5{
     background-color: rgb(246, 246, 246);
 }
 
-    .azzurro{
-        /* background-color: rgb(0, 195, 255); */
+    .image{
         flex:2;
         display: flex;
         align-items: center;
-        /* justify-content: center; */
     }
 
-    .rosa{
-        /* background-color: pink; */
+        .image img{
+        min-width: 100%;
+        }
+
+    .testo{
         flex:1;
         display: flex;
         flex-direction: column;
@@ -158,137 +165,119 @@ header{
         gap:2em;
         padding: 1em;
     }
-    .azzurro img{
-       min-width: 100%;
-    }
 
-    h2{
-        font-size: 4em;
-    }
-    h2+p{
-        font-size: 2em;
-        line-height: 1.5em;
-    }
-
-#blocco_5{
-    min-height: 80vh;
-}
-
-    .verde{
-       /*  background-color: green; */
-        flex:1;
-        display: flex;
+     .centered{
         flex-direction: column;
         align-items: center;
         gap: 20px;
     }
-h3{
-    font-size: 3em;
-    font-weight:800;
-    background-image: url(../img/stars.svg);
-    background-size:contain;
+
+        h2{
+            font-size: 4em;
+        }
+        h2+p{
+            font-size: 2em;
+            line-height: 1.5em;
+        }
     
-    background-repeat: no-repeat;
-    padding: 30px 50px 0 50px;
-}
- .violet{
-        background-color: rgb(142, 161, 226);
-        color: white;
-        font-size: 1.4em;
-        font-weight: 600;
-    }
+        h3{
+            font-size: 3em;
+            font-weight:800;
+            background-image: url(../img/stars.svg);
+            background-size:contain;
+            background-repeat: no-repeat;
+            padding: 30px 50px 0 50px;
+        }
+ 
 
 
 /* -----------------------------FOOTER------------------------------ */
 
 footer{
     background-color: rgb(35, 35, 35);
-    }
+}
 
 #blocco_6{
     border-bottom: 1px solid grey;
-    padding-top: 30px;
 }
     
-    #footer_colonne > div{
-        /* background-color: aqua; */
-        flex:1;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-        padding-top: 10px;
-    }
-    #footer_colonne div:first-child{
-       /*  background-color: red; */
-        flex:1.5;
-        padding-top: 0px;
-       
-    }
-
-#blocco_7{
-    
-}
-    #banner{
-        justify-content: space-between;
-        align-items: flex-start;
-        margin-top: 20px;
-    }
-   
-
-#language{
-    background: none;
-    border: none;
-    background-image: url(../img/ita.png);
-    background-size: 20px;
-    background-repeat: no-repeat;
-    object-fit: contain;
-    padding-left: 25px;
-    color: white;
-}
-option{
-    background: transparent;
-    border: none;
-}
-h4{
-    font-size: 3em;
-}
-
-.social span{
-    background-color: white;
-    width: 20px;
-    height: 20px;
-    border-radius: 1em;
-    
-}
-.social{
+#footer_colonne > div{
+    flex:1;
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 20px;
+    padding-top: 10px;
 }
+
+#footer_colonne div:first-child{
+    flex:1.5;
+    padding-top: 0px;
+}
+
+
+   
+/* contenuto prima colonna  */
+
+    #language{
+        background: none;
+        border: none;
+        background-image: url(../img/ita.png);
+        background-size: 20px;
+        background-repeat: no-repeat;
+        object-fit: contain;
+        padding-left: 25px;
+        color: white;
+    }
+
+    option{
+        background: transparent;
+        border: none;
+    }
+
+    h4{
+        font-size: 3em;
+    }
+
+    .social span{
+        background-color: white;
+        width: 20px;
+        height: 20px;
+        border-radius: 1em;
+        
+    }
+
+    .social{
+        display: flex;
+        gap: 20px;
+    }
+
+/* contenuto colonne footer  */
+
 .menu_footer span{
     color: white;
     font-size:1.2em;
     font-weight: 800;
+    padding:5px;
 }
+
 .menu_footer > :first-child{
      color: rgb(142, 161, 226);
 }
+
+/* banner */
+
+#banner{
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
 #bottone_sx img{
     width: 100px;
 }
 
 #bottone_dx{
-       font-size: 1em;
-    }
-
-.wave {
-    height:100px;
-    weight:100%;
-    -webkit-mask-image: url(../img/wave.svg);
-     mask-image: url(../img/wave.svg);
-    background-color: rgb(246, 246, 246);
+    font-size: 1em;
 }
 
-.flip{
-  transform: scaleY(-1);
-}
