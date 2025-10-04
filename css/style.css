@@ -239,15 +239,12 @@ footer{
         font-size: 3em;
     }
 
-    .social span{
-        background-color: white;
-        width: 20px;
-        height: 20px;
-        border-radius: 1em;
-        
+    .social-networks li{
+        list-style-type: none;
+        font-size: 1.5em;
     }
 
-    .social{
+    .social-networks{
         display: flex;
         gap: 20px;
     }
